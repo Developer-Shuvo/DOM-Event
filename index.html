@@ -21,7 +21,38 @@
     <header>
         <h1 class=" text-blue text-4xl font-bold text-center p-4">This Event Name is : DOM</h1>
 
-        <button class="p-4 text-green text-2xl bg-yellow-400 border-green-800 border border-radius-5 w-100 cursor-pointer border:5px">Click Me</button>
+        <!-- Button click after show message -->
+
+        <!-- Button 1 -->
+        <button onclick="console.log('Anyone Click Now')" class="p-4 text-green text-2xl bg-yellow-400 border-green-800 border border-radius-5 w-100 cursor-pointer border:5px font-semibold">Click Me</button>
+        <!-- Button 2 -->
+        <button title="this is second button explore" onclick="console.log('Push')" class="p-4 text-olive-400 font-semibold bg-yellow-200 border border-red-800  border-3px border-radius-5px w-80 text-2xl">Press</button>
+        <br>
+        <!-- Button 3 -->
+        <!-- **** Click and then change color **** -->
+        <button onclick="document.body.style.backgroundColor='lime'; console.log('You click here and change the color to green');" class="p-4 mt-5 cursor-pointer text-white font-semibold bg-green-800 border border-lime-300  border-3px radius-5px w-80 text-2xl">
+            Make green
+        </button> <br>
+
+        <!-- ****** Button 4 ****** -->
+        <button onclick="document.body.style.backgroundColor='Yellow'; console.log('You click here and change the color to Yellow')" class="p-4 mt-5 text-white font-semibold bg-yellow-600 border border-lime-300  border-3px radius-5px w-80 text-2xl cursor-pointer">
+            Make Yellow
+        </button>
+        <!-- ****** Button 5 ****** -->
+        <button onclick="document.body.style.backgroundColor='blue'; console.log('You click here and change the color to blue')" class="p-4 cursor-pointer mt-5 text-white font-semibold bg-blue-800 border border-lime-300  border-3px radius-5px w-80 text-2xl">
+            Make blue
+        </button>
+
+
+
+        <!-- ****** Button 6 ****** -->
+        <button onclick="; console.log('Your click here and change the color to purple')" id="color-purple" class="p-4 cursor-pointer mt-5 text-white font-semibold bg-purple-800 border border-lime-300 border-3px rounded-md w-80 text-2xl">
+            Make Purple
+        </button>
+
+
+
+        <br>
     </header>
 
     <!-- *********Main********* -->
