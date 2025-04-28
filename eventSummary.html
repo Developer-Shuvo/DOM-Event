@@ -15,14 +15,47 @@
 </head>
 
 <body>
-    <h1 class="text-green-700 font-bold text-6xl ml-10 mt-10">Final DOM Event Handlers</h1>
 
-    <button onclick="manageOnClick ()" class="text-md text-blue p-4 width-100px h-60px border border-3px rounded-md items-center justify-center bg-yellow-400 mt-10 ml-58 cursor-pointer text-xl font-semibold hover:bg-lime-400">Select your choice</button><br>
+    <section>
 
-    <h2 id="if-you-interest" class="text-2xl font-semibold ml-10 mt-5">If you're interest in programming then click the button</h2>
+        <h1 class="text-green-700 font-bold text-6xl ml-10 mt-10">Final DOM Event Handlers</h1>
+
+        <button onclick="manageOnClick ()" class="text-md text-blue p-4 width-100px h-60px border border-3px rounded-md items-center justify-center bg-yellow-400 mt-10 ml-58 cursor-pointer text-xl font-semibold hover:bg-lime-400">Select your choice</button><br>
+
+        <h2 id="if-you-interest" class="text-2xl font-semibold ml-10 mt-5">If you're interest in programming then click the button</h2>
 
 
-    <!-- ** JavaScript Connection ** -->
+    </section>
+
+    <section class="mt-20 ml-40 ">
+        <div class="flex gap-2">
+            <input id="input-field" class="border border-4px w-150px h-40px rounded-lg p-4" type="text">
+            <button id="button-update" class="border border-5px cursor-pointer hover:bg-red-800 p-3 px-6  h-60px rounded-md bg-green-800 text-white text-lg font-semibold ">Update</button>
+        </div>
+
+
+        <p id="input-display" class="text-2xl text-red-800 font-bold mt-4 uppercase ml-2">Comment your desire</p>
+    </section>
+
+
+
+    <script>
+        document.getElementById('button-update').addEventListener('click', function() {
+            const inputField = document.getElementById('input-field');
+
+            const inputText = inputField.value;
+            const p = document.getElementById('input-display');
+            p.innerText = inputText;
+            inputField.value = '';
+
+
+        });
+    </script>
+
+
+
+
+    <!-- **************************** JavaScript Connection ************************************** -->
     <script src="./js/dom-summury.js"></script>
 
 </body>
