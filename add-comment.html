@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write comment & add the comment list</title>
+
+    <!-- ***********----Script--**********-- -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- ----*****-----Customizing With Tailwind-----****---- -->
+    <style type="text/tailwindcss">
+        @theme { --color-clifford: #da373d; }
+    </style>
+</head>
+
+<body>
+
+    <section class="flex flex-col justify-center items-center mt-20 ">
+
+        <h1 class="text-4xl text-blue-800 font-bold underline   ">Add Your Comment in our comment box</h1> <br>
+
+        <div id="comment-container">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit aliquid, aperiam provident enim nihil doloremque eveniet alias sequi accusantium, pariatur soluta, nam aliquam facilis id! Maiores nulla provident veniam totam.</p> <br>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum impedit ducimus laudantium a deleniti accusantium cum esse consequatur commodi illum iste corrupti obcaecati ab ipsum, amet fugiat quae ad architecto.</p>
+        </div>
+
+
+        <!------ **Text Area for write some comment* ------>
+        <textarea name="" id="new-comment" cols="60" rows='5' class="border rounded-xl border-green-800 px-6 py-2 text-lg text-green-800 mt-10"></textarea>
+
+        <!----- ** Button to Post the comment **---- -->
+        <button id="post-button" class=" cursor-pointer hover:bg-red-800 p-3 px-6  h-60px rounded-md bg-green-800 text-white text-lg font-semibold mt-4">Update</button>
+
+    </section>
+
+
+    <script>
+        // 1st step : add EventListener to the post button 
+        document.getElementById('post-button').addEventListener('click', function() {
+            console.log('Successfully clicked and post a new comment')
+                // 2nd step : get the comment inside the text area
+
+            const commentBox = document.getElementById('new-comment');
+            const newComment = commentBox.value;
+
+            // 3rd step :Now finally set the comment inside the comment container
+            const commentContainer = document.getElementById('comment-container');
+            const p = document.createElement('p');
+            p.innerText = newComment;
+            commentContainer.appendChild(p);
+
+            // 4th step : Now clear text area for the next comment
+            commentBox.value = '';
+
+
+        })
+    </script>
+
+
+
+</body>
+
+</html>
