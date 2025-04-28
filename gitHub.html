@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using JavaScript</title>
+
+    <!-- ***********----Script--**********-- -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- ----*****-----Customizing With Tailwind-----****---- -->
+    <style type="text/tailwindcss">
+        @theme { --color-clifford: #da373d; }
+    </style>
+</head>
+
+<body>
+
+    <section class="flex flex-col justify-center items-center mt-20 ">
+        <h1 id="info" class="text-purple-700 text-4xl font-bold"> Enter the correct Password to remove</h1>
+
+        <div class="flex gap-2 mt-10 justify-center items-center text-center">
+            <input id="delete-confirm" class="border text-lg p-4 text-green-700 italic rounded-lg" placeholder="Confirm it" type="text">
+            <button id="btn-delete" disabled class="cursor-pointer hover:bg-red-800 p-3 px-6 h-60px rounded-md bg-green-800 text-white text-lg font-semibold ">Set</button>
+        </div>
+
+
+    </section>
+
+
+    <!-- ********************************************J**s***************************************************************  -->
+    <script>
+        document.getElementById('btn-delete').addEventListener('click', function() {
+            const hideInfo = document.getElementById('info');
+            hideInfo.style.display = 'none';
+
+        })
+
+        // ******************************
+        document.getElementById('delete-confirm').addEventListener('keyup', function(event) {
+            const text = event.target.value;
+            const removeButton = document.getElementById('btn-delete');
+            if (text === 'Password@7188') {
+                removeButton.removeAttribute('disabled');
+            } else(removeButton.setAttribute('disabled', true));
+
+        })
+    </script>
+
+
+
+</body>
+
+</html>
