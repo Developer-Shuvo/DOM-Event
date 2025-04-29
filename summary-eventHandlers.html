@@ -25,6 +25,9 @@
         <!-- Button Red -->
         <button id="red" class="cursor-pointer hover:bg-green-700 p-3 px-6 h-60px rounded-md bg-red-700 text-white text-lg font-semibold ">Click to Red</button>
 
+        <!-- Text box -->
+        <input id="text-box" class="border rounded-lg height-40px width-120px bg-gray-200 p-4 text-green-800 " placeholder="Enter something" type="text">
+
     </section>
 
 
@@ -35,9 +38,14 @@
             document.body.style.backgroundColor = 'green';
         }
 
-        // <<<<<*******System no.1 to change click color************>>>>
+        // <<<<<*******System no.2 to change click color************>>>>
         document.getElementById('red').addEventListener('click', function() {
-            document.body.style.backgroundColor = 'red';
+                document.body.style.backgroundColor = 'red';
+            })
+            // <<<<<  *System no.3 to change click color  *>>>>
+        document.getElementById('text-box').addEventListener('keyup', function(event) {
+
+            console.log(event.target.value);
         })
     </script>
 
