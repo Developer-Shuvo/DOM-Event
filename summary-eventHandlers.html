@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handlers</title>
+    <!-- ***********----Script--**********-- -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- ----*****-----Customizing With Tailwind-----****---- -->
+    <style type="text/tailwindcss">
+        @theme { --color-clifford: #da373d; }
+    </style>
+</head>
+
+<body>
+
+    <section class="flex flex-col justify-center items-center mt-20 gap-8">
+        <h1 class="text-lime-400 text-5xl  font-bold italic  underline">Click the button and change the background color</h1>
+
+        <!-- Button Green -->
+        <button onclick="makeGreen()" id="green" class="cursor-pointer hover:bg-red-700 p-3 px-6 h-60px rounded-md bg-green-700 text-white text-lg font-semibold ">Click to green</button>
+
+        <!-- Button Red -->
+        <button id="red" class="cursor-pointer hover:bg-green-700 p-3 px-6 h-60px rounded-md bg-red-700 text-white text-lg font-semibold ">Click to Red</button>
+
+    </section>
+
+
+    <!-- ***************************** -->
+    <script>
+        // <<<<<*******System no.1 to change click color************>>>>
+        function makeGreen() {
+            document.body.style.backgroundColor = 'green';
+        }
+
+        // <<<<<*******System no.1 to change click color************>>>>
+        document.getElementById('red').addEventListener('click', function() {
+            document.body.style.backgroundColor = 'red';
+        })
+    </script>
+
+
+</body>
+
+</html>
