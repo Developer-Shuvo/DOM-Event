@@ -1,2 +1,3 @@
-Document Object Model = DOM 
-Dom is very useful 
+# Document Object Model = DOM 
+# Dom is very useful 
+# Dom works dynamically 
